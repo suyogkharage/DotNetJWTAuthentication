@@ -1,0 +1,16 @@
+﻿@page
+@model WebAppWithJWT.Pages.SecurePageModel
+@{
+    ViewData["Title"] = "Secure Page";
+}
+
+<h2>Secure Data</h2>
+
+@if (string.IsNullOrEmpty(Model.ApiData))
+{
+    <p>No data available.</p>
+}
+else
+{
+    <p>Data from API: @Model.ApiData</p>
+}
